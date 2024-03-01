@@ -4,9 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Favorite Song Showcase</title>
+    <style>
+    #displayArea {
+        display: none;
+    }
+    </style>
   </head>
 
   <body>
+    <div id="myForm">
+      <form id="songForm" onsubmit="displaySongInfo(); return false;">
+        <label for="songName">Song Name:</label><br>
+        <input type="text" id="songName" name="songName"><br>
+        <label for="youtubeLink">YouTube Link:</label><br>
+        <input type="text" id="youtubeLink" name="youtubeLink"><br>
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description"></textarea><br>
+        <label for="year">Year:</label><br>
+        <input type="number" id="year" name="year"><br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div id="displayArea">
+      <h1>Song Information</h1>
+      <p><b>Name:</b> 
+        <span id="displaySongName"></span>
+      </p>
+      <p><b>Description:</b> 
+        <span id="displayDescription"></span>
+      </p>
+      <p><b>Year:</b> 
+        <span id="displayYear"></span>
+      </p>
+      <div id="youtubeVideo"></div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
